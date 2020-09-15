@@ -1,6 +1,6 @@
 Format: 3.0 (quilt)
 Source: @PACKAGE@
-Binary: @PACKAGE@, @PACKAGE@-dbg, @PACKAGE@-dev, @CPP_PACKAGE@, @CPP_PACKAGE@-dev, @CPP_PACKAGE@-dbg
+Binary: @PACKAGE@@SYSREPO_SOVERSION@, @PACKAGE@@SYSREPO_SOVERSION@-dbg, @PACKAGE@-dev, @CPP_PACKAGE@@SYSREPO_SOVERSION@, @CPP_PACKAGE@@SYSREPO_SOVERSION@-dev, @CPP_PACKAGE@-dbg
 Maintainer: CESNET <mvasko@cesnet.cz>
 Version: @SYSREPO_VERSION@
 Architecture: any

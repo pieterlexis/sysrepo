@@ -1,11 +1,11 @@
-set(PACKAGE "sysrepo")
+set(PACKAGE "libsysrepo")
 set(PACKAGE_BRIEF "Sysrepo library")
 set(PACKAGE_DESC ${SYSREPO_DESC})
 set(PACKAGE_DBG_DESC "Sysrepo library debug symbols.")
 set(PACKAGE_DEV_BRIEF "Headers of Sysrepo library")
 set(PACKAGE_DEV_DESC "Sysrepo library headers for C.")
 
-set(CPP_PACKAGE "sysrepo-cpp")
+set(CPP_PACKAGE "libsysrepo-cpp")
 set(CPP_PACKAGE_BRIEF "Sysrepo bindings to C++")
 set(CPP_PACKAGE_DESC "Sysrepo library bindings in C++ language.")
 set(CPP_PACKAGE_DBG_DESC "Sysrepo library C++ bindings debug symbols.")
@@ -33,11 +33,11 @@ configure_file(${PROJECT_SOURCE_DIR}/packages/debian.copyright
 configure_file(${PROJECT_SOURCE_DIR}/packages/${PACKAGE}.rpmlintrc
                ${PROJECT_BINARY_DIR}/build-packages/${PACKAGE}.rpmlintrc COPYONLY)
 configure_file(${PROJECT_SOURCE_DIR}/packages/debian.${PACKAGE}.install
-               ${PROJECT_BINARY_DIR}/build-packages/debian.${PACKAGE}.install COPYONLY)
+               ${PROJECT_BINARY_DIR}/build-packages/debian.${PACKAGE}${SYSREPO_SOVERSION}.install COPYONLY)
 configure_file(${PROJECT_SOURCE_DIR}/packages/debian.${PACKAGE}-dev.install
                ${PROJECT_BINARY_DIR}/build-packages/debian.${PACKAGE}-dev.install COPYONLY)
 configure_file(${PROJECT_SOURCE_DIR}/packages/debian.${CPP_PACKAGE}.install
-               ${PROJECT_BINARY_DIR}/build-packages/debian.${CPP_PACKAGE}.install COPYONLY)
+               ${PROJECT_BINARY_DIR}/build-packages/debian.${CPP_PACKAGE}${SYSREPO_SOVERSION}.install COPYONLY)
 configure_file(${PROJECT_SOURCE_DIR}/packages/debian.${CPP_PACKAGE}-dev.install
                ${PROJECT_BINARY_DIR}/build-packages/debian.${CPP_PACKAGE}-dev.install COPYONLY)
 # no python package for Debian because there is only SWIG 3.10 on Debian 9 :-/
